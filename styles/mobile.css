@@ -1,0 +1,112 @@
+@media (max-width: 485px) {
+  /* header */
+  header {
+    padding: 0px 15px;
+  }
+
+  .header_section_buttons {
+    column-gap: 8px;
+  }
+
+  .header_section_item_arrow_link {
+    font-size: 12px;
+  }
+
+  /* hero */
+
+  .breadcrumb_container {
+    padding: 16px 15px;
+  }
+
+  .chevron_left {
+    display: inline-block;
+  }
+
+  .container_padding.hero {
+    padding-bottom: 36px;
+  }
+
+  .hero_container {
+    padding: 172px 15px 20px;
+    min-height: 0;
+  }
+
+  .hero_content_wrapper > h1 {
+    font-size: 16px;
+  }
+
+  /* big msg */
+  .big_msg_container {
+    padding: 36px 15px;
+  }
+  .big_msg_section > p {
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  /* grid */
+
+  .title {
+    font-size: 14px;
+  }
+
+  .container_padding.grid {
+    padding-left: 15px;
+  }
+  .grid_wrapper {
+    row-gap: 20px;
+  }
+
+  .img_wrapper.img2 {
+    padding-right: 15px;
+  }
+
+  /* numbers */
+
+  .container_padding.numbers {
+    padding: 36px 15px;
+  }
+
+  .numbers_item {
+    padding: 24px;
+  }
+  .numbers_num {
+    font-size: 36px;
+  }
+
+  .numbers_name {
+    font-size: 14px;
+  }
+
+  /* digital app */
+  .container_padding.digital_app {
+    margin-block: 36px;
+    padding-inline: 15px;
+  }
+
+  .digital_app_content {
+    padding-block: 32px;
+    row-gap: 24px;
+  }
+
+  .digital_app_content > h2 {
+    font-size: 14px;
+  }
+  .digital_app_img {
+    width: 100%;
+  }
+  /* offers */
+
+  .offers_container {
+    row-gap: 20px;
+  }
+
+  .container_padding.slider {
+    padding-block: 36px;
+  }
+
+  .container_header_wrapper_padding,
+  .offers_wrapper {
+    padding-inline: 15px;
+  }
+}

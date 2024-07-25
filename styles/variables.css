@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'TBCX';
+  src: url('./fonts/TBCXBold.6db5e61d.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TBCX';
+  src: url('./fonts/TBCXMedium.8ef1248a.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TBCX';
+  src: url('./fonts/TBCXRegular.dee156cc.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --background_color: #f9fafa;
+  --border_color: #e1e4e5;
+  --font_color_dark: #141719;
+  --font_color: #222;
+  --font_color_light: #555f62;
+  --logo_color: #0f4380;
+  --link_font_color: #182cc0;
+  --hover_color: #3295ce;
+  --font: 'TBCX', sans-serif;
+}
