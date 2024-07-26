@@ -145,6 +145,21 @@
     padding: 40px 45px;
   }
 
+  /* products */
+
+  .product_card_description {
+    max-height: 90px;
+    font-size: 12px;
+  }
+
+  .product_card_description:before {
+    margin-right: 0;
+  }
+
+  .offer_card_name.product {
+    font-weight: 14px;
+  }
+
   /* digital app */
   .container_padding.digital_app {
     margin-block: 40px;

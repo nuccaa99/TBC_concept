@@ -725,10 +725,41 @@ main {
   filter: invert(99%) sepia(7%) saturate(401%) hue-rotate(169deg)
     brightness(92%) contrast(94%);
 }
+
+/* products */
+
+.product_card_description {
+  max-height: 105px;
+  height: 100%;
+  font-size: 14px;
+  color: var(--font_color_light);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5em;
+  position: relative;
+}
+
+.product_card_description:before {
+  content: '...';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 30px;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.swiper_arrows_wrapper.hidden {
+  display: none;
+}
+
 /* footer */
 .container_padding.footer {
   padding-top: 45px;
 }
+
 footer {
   padding-top: 0;
   margin-top: 60px;

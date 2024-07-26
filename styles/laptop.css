@@ -79,6 +79,11 @@
   .offers_wrapper {
     padding-inline: 47px;
   }
+
+  /* products */
+  .swiper_arrows_wrapper.hidden {
+    display: flex;
+  }
 }
 
 @media (max-width: 1100px) {
