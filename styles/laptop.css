@@ -63,7 +63,14 @@
   .offers_container {
     max-width: 100%;
   }
- 
+}
+
+@media (max-width: 1200px) {
+  .swiper_scrollbar_wrapper {
+    width: auto;
+    max-width: none;
+    margin-inline: 47px;
+  }
 }
 
 @media (max-width: 1195px) {

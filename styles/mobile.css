@@ -109,4 +109,8 @@
   .offers_wrapper {
     padding-inline: 15px;
   }
+
+  .swiper_scrollbar_wrapper {
+    margin-inline: 15px;
+  }
 }

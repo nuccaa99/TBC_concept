@@ -59,6 +59,10 @@
   .offers_wrapper {
     padding-inline: 45px;
   }
+
+  .swiper_scrollbar_wrapper {
+    margin-inline: 45px;
+  }
 }
 
 @media (max-width: 768px) {
