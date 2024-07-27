@@ -3,6 +3,8 @@ const burgerMenuIcon = document.querySelector('.header_burger_menu');
 const parent = document.querySelector('main');
 const children = parent.children;
 
+// open close burger menu
+
 burgerMenuIcon.addEventListener('click', function () {
   this.classList.toggle('active');
   burgerMenu.classList.toggle('hidden');
@@ -25,3 +27,37 @@ function handleResize() {
 }
 
 window.addEventListener('resize', handleResize);
+
+// burger menu dropdown as for header as footer
+
+document.addEventListener('DOMContentLoaded', function () {
+  const titleWrappers = document.querySelectorAll(
+    '.buger_menu_item_dropdown_title_wrapper'
+  );
+  const dropdownLists = document.querySelectorAll(
+    '.buger_menu_item_dropdown_list'
+  );
+  const dropdownArrows = document.querySelectorAll(
+    '.buger_menu_item_dropdown_title_wrapper img'
+  );
+
+  function toggleDropdown() {
+    this.nextElementSibling.classList.toggle('show');
+    this.querySelector('img').classList.toggle('rotate');
+  }
+
+  function checkWindowSize() {
+    if (window.innerWidth > 1110) {
+      dropdownLists.forEach((list) => list.classList.remove('show'));
+      dropdownArrows.forEach((arrow) => arrow.classList.remove('rotate'));
+    }
+  }
+
+  titleWrappers.forEach((wrapper) => {
+    wrapper.addEventListener('click', toggleDropdown);
+  });
+
+  window.addEventListener('resize', checkWindowSize);
+
+  checkWindowSize();
+});
