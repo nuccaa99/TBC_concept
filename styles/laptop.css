@@ -4,6 +4,13 @@
   .header_section_item_language {
     font-size: 14px;
   }
+
+  .header_dropdown_content_list.offers {
+    left: 130px;
+  }
+  .header_dropdown_content_list.spaces {
+    left: 260px;
+  }
   /* hero */
 
   .hero_container {
@@ -89,7 +96,8 @@
 @media (max-width: 1100px) {
   /* header */
   .navbar_list,
-  .header_section_item.language_change {
+  .header_section_item.language_change,
+  .header_dropdown {
     display: none;
   }
 

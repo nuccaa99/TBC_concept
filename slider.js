@@ -12,6 +12,12 @@ const slidersConfig = [
     swiperArrowLeft: document.querySelector('.swiper_arrow.left.product'),
     swiperArrowRight: document.querySelector('.swiper_arrow.right.product'),
   },
+  {
+    dragArea: document.querySelector('.offers_slider.award'),
+    slider: document.querySelector('.offers_wrapper.award'),
+    swiperArrowLeft: document.querySelector('.swiper_arrow.left.award'),
+    swiperArrowRight: document.querySelector('.swiper_arrow.right.award'),
+  },
 ];
 
 const ACTIVE_ARROW_FILTER =
@@ -130,22 +136,26 @@ const initializeSlider = (config) => {
 };
 
 const resizeListener = () => {
-  slidersConfig.forEach((config) => {
-    let dragAreaWidth = config.dragArea.clientWidth;
-    let sliderWidth = config.slider.scrollWidth;
-    config.MIN_DISTANCE = dragAreaWidth - sliderWidth;
+  requestAnimationFrame(() => {
+    slidersConfig.forEach((config) => {
+      let dragAreaWidth = config.dragArea.clientWidth;
+      let sliderWidth = config.slider.scrollWidth;
 
-    if (window.innerWidth < 1440 && window.innerWidth > 485) {
-      config.MIN_DISTANCE = dragAreaWidth - sliderWidth - 50;
-    } else if (window.innerWidth <= 485) {
-      config.MIN_DISTANCE = dragAreaWidth - sliderWidth - 15;
-    }
+      config.MIN_DISTANCE = dragAreaWidth - sliderWidth;
 
-    config.cumulativeDistance = 0;
-    updateSliderPosition(config.slider, config.cumulativeDistance);
-    updateArrowColors(config);
+      if (window.innerWidth < 1440 && window.innerWidth > 485) {
+        config.MIN_DISTANCE = dragAreaWidth - sliderWidth - 50;
+      } else if (window.innerWidth <= 485) {
+        config.MIN_DISTANCE = dragAreaWidth - sliderWidth - 15;
+      }
+
+      config.cumulativeDistance = 0;
+      updateSliderPosition(config.slider, config.cumulativeDistance);
+      updateArrowColors(config);
+    });
   });
 };
 
 window.addEventListener('resize', resizeListener);
+
 slidersConfig.forEach(initializeSlider);

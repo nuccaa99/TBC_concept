@@ -26,13 +26,13 @@
           </a>
           <!-- nav -->
           <ul class="navbar_list">
-            <li class="navbar_list_item">
+            <li class="navbar_list_item products">
               <a class="navbar_list_item_link" href="">პროდუქტები</a>
             </li>
-            <li class="navbar_list_item">
+            <li class="navbar_list_item offers">
               <a class="navbar_list_item_link" href="">შეთავაზებები</a>
             </li>
-            <li class="navbar_list_item">
+            <li class="navbar_list_item spaces">
               <a class="navbar_list_item_link" href="">კონცეპტის სივრცე</a>
             </li>
           </ul>
@@ -71,6 +71,64 @@
             <div class="header_burger_menu_line one"></div>
             <div class="header_burger_menu_line two"></div>
             <div class="header_burger_menu_line three"></div>
+          </div>
+        </div>
+      </div>
+      <!-- header dropdown -->
+      <div class="header_dropdown hidden">
+        <div class="header_dropdown_content">
+          <div class="header_dropdown_content_img_wrapper">
+            <img src="./assets/cards.png" class="header_dropdown_content_img" />
+            <div class="header_section_item">
+              <img
+                src="./assets/arrow_right.svg"
+                alt="arrow_right"
+                class="header_section_item_arrow dropdown"
+              />
+              <span class="header_section_item_arrow_link dropdown"
+                >ციფრული ბანკი</span
+              >
+            </div>
+          </div>
+          <div class="header_dropdown_content_lists_wrapper">
+            <ul class="header_dropdown_content_list products hidden">
+              <li class="header_dropdown_content_list_item product">
+                <a href=""> პროდუქტების მიმოხილვა </a>
+              </li>
+              <li class="header_dropdown_content_list_item product">
+                <a href="">ნაკრები</a>
+              </li>
+              <li class="header_dropdown_content_list_item product">
+                <a href=""> პირადი ბანკირი </a>
+              </li>
+            </ul>
+
+            <ul class="header_dropdown_content_list offers hidden">
+              <li class="header_dropdown_content_list_item offer">
+                <a href=""> მიმოხილვა </a>
+              </li>
+              <li class="header_dropdown_content_list_item offer">
+                <a href="">შეთავაზებები</a>
+              </li>
+              <li class="header_dropdown_content_list_item offer">
+                <a href=""> ღონისძიებები </a>
+              </li>
+            </ul>
+
+            <ul class="header_dropdown_content_list spaces hidden">
+              <li class="header_dropdown_content_list_item space">
+                <a href=""> მიმოხილვა </a>
+              </li>
+              <li class="header_dropdown_content_list_item space">
+                <a href="">კაფე</a>
+              </li>
+              <li class="header_dropdown_content_list_item space">
+                <a href=""> ბიბლიოთეკა </a>
+              </li>
+              <li class="header_dropdown_content_list_item space">
+                <a href=""> კონცეპტ ფილიალები </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -494,11 +552,7 @@
                     class="offer_card_img"
                   />
                 </div>
-                <img
-                  src="assets/offers/offer3-tag.png"
-                  alt="offer tag"
-                  class="offer_card_img_tag"
-                />
+
                 <div class="offer_card_txt product">
                   <p class="offer_card_name product">360</p>
                   <p class="product_card_description">
@@ -547,83 +601,61 @@
         <section class="offers_container">
           <div class="container_header_wrapper_padding">
             <div class="container_header_wrapper">
-              <h2 class="title offers">პროდუქტები</h2>
+              <h2 class="title offers">ჯილდოები</h2>
             </div>
           </div>
           <div class="offers_slider award">
             <div class="offers_wrapper award">
               <div class="offer_card award">
-                <div class="offer_card_img_wrapper">
-                  <img
-                    src="assets/grid_img_one.png"
-                    alt="offer"
-                    class="offer_card_img"
-                  />
-                </div>
-
-                <div class="offer_card_txt award">
-                  <p class="offer_card_name award">ციფრული</p>
-                  <p class="product_card_description">
-                    თიბისი კონცეპტის ციფრული ნაკრები განკუთვნილია მათთვის,
-                    ვისთვისაც
-                    <strong
-                      >საბანკო მომსახურების სარგებლობა ყოველდღიურობის
-                      ნაწილია</strong
-                    >, ვინც აქტიურად მოიხმარს
-                    <strong>არასაბანკო პროდუქტებსა და შეთავაზებებს</strong> და
-                    ვისაც ურჩევნია დამოუკიდებლად,
-                    <strong>პირადი ბანკირის გარეშე</strong> მართოს საკუთარი
-                    ფინანსები და საბანკო ოპერაციები.
-                  </p>
-                </div>
-              </div>
-
-              <div class="offer_card award">
-                <div class="offer_card_img_wrapper">
-                  <img
-                    src="assets/grid_img_two.png"
-                    alt="offer"
-                    class="offer_card_img"
-                  />
-                </div>
-
-                <div class="offer_card_txt award">
-                  <p class="offer_card_name award">პრემიუმი</p>
-                  <p class="product_card_description">
-                    თიბისი კონცეპტის მომხმარებლებთან ურთიერთობის ერთ-ერთი
-                    ფორმატი - <strong>პრემიუმ ნაკრები</strong>, სხვა საბანკო და
-                    არასაბანკო უპირატესობებთან ერთად,
-                    <strong>პირადი ბანკირის მომსახურებას</strong> გულისხმობს.
-                    პირადი ბანკირის მთავარი ამოცანა მომხარებლისთვის ცხოვრების
-                    გამარტივება და მისთვის უმაღლესი ხარისხის მომსახურების
-                    უზრუნველყოფაა.
-                  </p>
-                </div>
-              </div>
-
-              <div class="offer_card award">
-                <div class="offer_card_img_wrapper">
-                  <img
-                    src="assets/grid_img_three.png"
-                    alt="offer"
-                    class="offer_card_img"
-                  />
-                </div>
                 <img
-                  src="assets/offers/offer3-tag.png"
-                  alt="offer tag"
-                  class="offer_card_img_tag"
+                  src="assets/awards/award-one.png"
+                  alt="offer"
+                  class="offer_card_img award"
                 />
-                <div class="offer_card_txt award">
-                  <p class="offer_card_name award">360</p>
-                  <p class="product_card_description">
-                    <strong>თიბისი კონცეპტის 360</strong> ნაკრები განკუთვნილია
-                    მათთვის, ვისაც სხვა საბანკო და არასაბანკო უპიტარესობებთან
-                    ერთად, კიდევ უფრო
-                    <strong>მეტი ფინანსური ინსტრუმენტი</strong> და
-                    <strong>გაზრდილი შესაძლებლობები</strong> ესაჭიროება.
-                  </p>
-                </div>
+
+                <p class="offer_card_name award">
+                  საუკეთესო პერსონალური საბანკო მომსახურება საქართველოში 2024
+                </p>
+                <p class="product_card_description award">The Global Finance</p>
+              </div>
+
+              <div class="offer_card award">
+                <img
+                  src="assets/awards/award-two.png"
+                  alt="offer"
+                  class="offer_card_img award"
+                />
+
+                <p class="offer_card_name award">
+                  საუკეთესო პერსონალური საბანკო მომსახურება საქართველოში 2023
+                </p>
+                <p class="product_card_description award">Euromoney</p>
+              </div>
+
+              <div class="offer_card award">
+                <img
+                  src="assets/awards/award-one.png"
+                  alt="offer"
+                  class="offer_card_img award"
+                />
+
+                <p class="offer_card_name award">
+                  საუკეთესო პერსონალური საბანკო მომსახურება საქართველოში 2022
+                </p>
+                <p class="product_card_description award">The Global Finance</p>
+              </div>
+
+              <div class="offer_card award">
+                <img
+                  src="assets/awards/award-four.png"
+                  alt="offer"
+                  class="offer_card_img award"
+                />
+
+                <p class="offer_card_name award">
+                  საუკეთესო პერსონალური საბანკო მომსახურება საქართველოში 2021
+                </p>
+                <p class="product_card_description award">The Banker & PWM</p>
               </div>
             </div>
           </div>
@@ -633,7 +665,7 @@
             <img
               src="/assets/arrow_right.svg"
               alt="arrow"
-              class="swiper_arrow left product"
+              class="swiper_arrow left award"
             />
             <img
               src="/assets/arrow_right.svg"
@@ -662,8 +694,84 @@
             </div>
           </div>
         </div>
+        <div class="footer_middle">
+          <div class="footer_middle_section">
+            <h3 class="footer_middle_section title">პროდუქტები</h3>
+            <div class="footer_middle_section_list">
+              <p>ნაკრები</p>
+              <p>პერსონალური ბანკირი</p>
+            </div>
+          </div>
+          <div class="footer_middle_section">
+            <h3 class="footer_middle_section title">Lifestyle</h3>
+            <div class="footer_middle_section_list">
+              <p>შეთავაზებები</p>
+              <p>ღონისძიებები</p>
+            </div>
+          </div>
+          <div class="footer_middle_section">
+            <h3 class="footer_middle_section title">კონცეპტის სივრცე</h3>
+            <div class="footer_middle_section_list">
+              <p>ბიბლიოთეკა</p>
+              <p>კაფე</p>
+            </div>
+          </div>
+          <div class="footer_middle_section contact">
+            <h3 class="footer_middle_section title contact">დაგვიკავშირდით:</h3>
+            <div class="footer_middle_section_list">
+              <div class="footer_middle_section_list contact_items">
+                <a href="tel:+1234567890" class="contact_item phone">
+                  <img src="./assets/contact/phone.svg" />
+                  <p class="contact_item_txt">+995 32 2 27 27 00</p>
+                </a>
+                <a
+                  href="mailto:info@tbcconcept.ge"
+                  class="contact_item address"
+                >
+                  <img src="./assets/contact/mail.svg" />
+                  <p class="contact_item_txt">info@tbcconcept.ge</p>
+                </a>
+
+                <a
+                  href="https://www.google.com/maps/@41.7796491,44.8484866,2502m/data=!3m1!1e3?entry=ttu"
+                  target="_blank"
+                  class="contact_item address"
+                >
+                  <img src="./assets/contact/address.svg" />
+                  <p class="contact_item_txt">ფილიალები</p>
+                </a>
+              </div>
+            </div>
+            <div class="footer_middle_section socials">
+              <h3 class="footer_middle_section title">სოციალური ქსელები</h3>
+              <div class="footer_middle_section_socials">
+                <a href="https://www.facebook.com/" target="_blank">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/" target="_blank">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer_bottom">
+          <div class="footer_bottom_section">
+            <img src="assets/logo-small.svg" class="footer_small_logo" />
+            <p>2024 ყველა უფლება დაცულია</p>
+          </div>
+          <div class="footer_bottom_section links">
+            <p class="footer_bottom_section_link">კონფიდენციალურობა</p>
+            <p class="footer_bottom_section_link">წესები და პირობები</p>
+          </div>
+        </div>
       </footer>
     </main>
-    <script src="offersSlider.js"></script>
+    <script src="slider.js"></script>
+    <script src="headerDropdown.js"></script>
+    <script
+      src="https://kit.fontawesome.com/1c228abca5.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
