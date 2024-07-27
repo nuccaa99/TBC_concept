@@ -70,6 +70,18 @@
   .offers_container {
     max-width: 100%;
   }
+
+  /* footer */
+  .footer_middle_section.title {
+    font-size: 14px;
+  }
+
+  .footer_middle_section_list > p {
+    font-size: 14px;
+  }
+  .contact_item_txt {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -96,11 +108,11 @@
 @media (max-width: 1100px) {
   /* header */
   .navbar_list,
-  .header_section_item.language_change,
-  .header_dropdown {
+  .header_dropdown,
+  .header_section_item.language_toggle.header {
     display: none;
   }
-
+  /* burger menu */
   .header_burger_menu {
     display: flex;
     flex-direction: column;
@@ -108,12 +120,14 @@
     align-items: flex-start;
     padding: 8px;
     row-gap: 5px;
+    transition: transform 0.4s ease, opacity 0.4s ease;
   }
 
   .header_burger_menu_line {
     background-color: var(--font_color_light);
     border-radius: 1px;
     height: 2px;
+    transition: transform 0.4s ease, opacity 0.4s ease;
   }
 
   .header_burger_menu_line.one {
@@ -126,5 +140,60 @@
 
   .header_burger_menu_line.three {
     width: 15px;
+  }
+
+  .header_burger_menu.active .header_burger_menu_line.one {
+    transform: rotate(45deg);
+    width: 20px;
+    transform-origin: left center;
+  }
+
+  .header_burger_menu.active .header_burger_menu_line.two {
+    opacity: 0;
+  }
+
+  .header_burger_menu.active .header_burger_menu_line.three {
+    transform: rotate(-45deg);
+    width: 20px;
+    transform-origin: left center;
+  }
+
+  .buger_menu_container {
+    background-color: var(--background_color);
+    width: 100%;
+  }
+
+  .buger_menu_item_dropdown {
+    padding: 32px 45px;
+    border-bottom: 1px solid var(--border_color);
+  }
+  .buger_menu_item_dropdown_title_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .buger_menu_item_dropdown_title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.7;
+  }
+
+  .footer_middle_section.contact.header {
+    padding: 45px;
+  }
+  .footer_middle_section.title.header {
+    font-size: 14px;
+  }
+  .contact_item_txt.header {
+    font-size: 14px;
+  }
+
+  .footer_bottom.header {
+    border-top: 1px solid var(--border_color);
+    padding-inline: 45px;
+  }
+  .footer_bottom_section.links.header {
+    row-gap: 8px;
+    flex-wrap: wrap;
   }
 }

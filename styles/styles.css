@@ -36,8 +36,13 @@ main {
   margin-top: 80px;
 }
 .header_burger_menu,
-.page_logo.small {
+.page_logo.small,
+.page_logo_darker.small {
   display: none;
+}
+
+.header_burger_menu {
+  cursor: pointer;
 }
 
 .header_container {
@@ -54,6 +59,7 @@ main {
 }
 
 .page_logo,
+.page_logo_globe,
 .magnifying_glass,
 .footer_small_logo {
   filter: invert(38%) sepia(6%) saturate(650%) hue-rotate(147deg)
@@ -876,6 +882,13 @@ strong {
 }
 
 /* footer */
+
+.buger_menu_container.footer {
+  display: none;
+}
+footer {
+  background-color: #fff;
+}
 .container_padding.footer {
   padding-top: 45px;
   padding-bottom: 0px;
@@ -918,7 +931,7 @@ footer {
   line-height: 1.7;
   cursor: pointer;
 }
-.title.contact {
+#title_contact {
   cursor: default;
 }
 .footer_middle_section_list > p {

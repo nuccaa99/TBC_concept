@@ -53,11 +53,11 @@
               >გამოიწერეთ ნაკრები</span
             >
           </div>
-          <div class="header_section_item language_toggle">
+          <div class="header_section_item language_toggle header">
             <img
               src="./assets/globe.svg"
               alt="language globe"
-              class="page_logo"
+              class="page_logo_globe"
             />
             <span class="header_section_item_language">ქარ</span>
             <div class="language_dropdown_container">
@@ -134,6 +134,75 @@
       </div>
     </header>
     <main>
+      <!-- burger menu -->
+      <div class="buger_menu_container hidden">
+        <div class="buger_menu_item_dropdown">
+          <div class="buger_menu_item_dropdown_title_wrapper">
+            <h2 class="buger_menu_item_dropdown_title">პროდუქტები</h2>
+            <img src="assets/dropdown.svg" alt="dropdown arrow" />
+          </div>
+        </div>
+        <div class="buger_menu_item_dropdown">
+          <div class="buger_menu_item_dropdown_title_wrapper">
+            <h2 class="buger_menu_item_dropdown_title">შეთავაზებები</h2>
+            <img src="assets/dropdown.svg" alt="dropdown arrow" />
+          </div>
+        </div>
+        <div class="buger_menu_item_dropdown">
+          <div class="buger_menu_item_dropdown_title_wrapper">
+            <h2 class="buger_menu_item_dropdown_title">კონცეპტის სივრცე</h2>
+            <img src="assets/dropdown.svg" alt="dropdown arrow" />
+          </div>
+        </div>
+        <div class="footer_middle_section contact header">
+          <h3 class="footer_middle_section title header">დაგვიკავშირდით:</h3>
+          <div class="footer_middle_section_list">
+            <div class="footer_middle_section_list contact_items">
+              <a href="tel:+1234567890" class="contact_item phone">
+                <img src="./assets/contact/phone.svg" />
+                <p class="contact_item_txt header">+995 32 2 27 27 00</p>
+              </a>
+              <a href="mailto:info@tbcconcept.ge" class="contact_item address">
+                <img src="./assets/contact/mail.svg" />
+                <p class="contact_item_txt header">info@tbcconcept.ge</p>
+              </a>
+
+              <a
+                href="https://www.google.com/maps/@41.7796491,44.8484866,2502m/data=!3m1!1e3?entry=ttu"
+                target="_blank"
+                class="contact_item address"
+              >
+                <img src="./assets/contact/address.svg" />
+                <p class="contact_item_txt header">ფილიალები</p>
+              </a>
+            </div>
+          </div>
+          <div class="footer_middle_section socials">
+            <h3 class="footer_middle_section title header">
+              სოციალური ქსელები
+            </h3>
+            <div class="footer_middle_section_socials">
+              <a href="https://www.facebook.com/" target="_blank">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="https://www.instagram.com/" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer_bottom header">
+          <div class="footer_bottom_section">
+            <img src="assets/logo-small.svg" class="footer_small_logo" />
+            <p>2024 ყველა უფლება დაცულია</p>
+          </div>
+          <div class="footer_bottom_section links header">
+            <p class="footer_bottom_section_link">კონფიდენციალურობა</p>
+            <p class="foot er_bottom_section_link">წესები და პირობები</p>
+          </div>
+        </div>
+      </div>
+
       <!-- breadcrumb -->
       <section class="breadcrumb_container">
         <div class="breadcrumb_wrapper">
@@ -679,12 +748,17 @@
       <!-- footer -->
       <footer class="container_padding footer">
         <div class="footer_top">
-          <img src="assets/logo.svg" alt="logo" />
+          <a href="index.html" class="page_logo_darker">
+            <img src="assets/logo.svg" alt="logo" />
+          </a>
+          <a href="index.html" class="page_logo_darker small">
+            <img src="./assets/logo-small.svg" alt="logo" />
+          </a>
           <div class="header_section_item language_toggle">
             <img
               src="./assets/globe.svg"
               alt="language globe"
-              class="page_logo"
+              class="page_logo_globe"
             />
             <span class="header_section_item_language">ქარ</span>
             <div class="language_dropdown_container">
@@ -716,8 +790,32 @@
               <p>კაფე</p>
             </div>
           </div>
+
+          <div class="buger_menu_container footer">
+            <div class="buger_menu_item_dropdown">
+              <div class="buger_menu_item_dropdown_title_wrapper">
+                <h2 class="buger_menu_item_dropdown_title">პროდუქტები</h2>
+                <img src="assets/dropdown.svg" alt="dropdown arrow" />
+              </div>
+            </div>
+            <div class="buger_menu_item_dropdown">
+              <div class="buger_menu_item_dropdown_title_wrapper">
+                <h2 class="buger_menu_item_dropdown_title">შეთავაზებები</h2>
+                <img src="assets/dropdown.svg" alt="dropdown arrow" />
+              </div>
+            </div>
+            <div class="buger_menu_item_dropdown">
+              <div class="buger_menu_item_dropdown_title_wrapper">
+                <h2 class="buger_menu_item_dropdown_title">კონცეპტის სივრცე</h2>
+                <img src="assets/dropdown.svg" alt="dropdown arrow" />
+              </div>
+            </div>
+          </div>
+
           <div class="footer_middle_section contact">
-            <h3 class="footer_middle_section title contact">დაგვიკავშირდით:</h3>
+            <h3 class="footer_middle_section title" id="title_contact">
+              დაგვიკავშირდით:
+            </h3>
             <div class="footer_middle_section_list">
               <div class="footer_middle_section_list contact_items">
                 <a href="tel:+1234567890" class="contact_item phone">
@@ -769,6 +867,7 @@
     </main>
     <script src="slider.js"></script>
     <script src="headerDropdown.js"></script>
+    <script src="burgerMenu.js"></script>
     <script
       src="https://kit.fontawesome.com/1c228abca5.js"
       crossorigin="anonymous"

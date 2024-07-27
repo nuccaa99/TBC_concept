@@ -12,6 +12,21 @@
     font-size: 12px;
   }
 
+  /* burger menu */
+
+  .buger_menu_item_dropdown {
+    padding-inline: 15px;
+  }
+
+  .footer_middle_section.contact.header {
+    padding-inline: 15px;
+  }
+
+  .footer_bottom.header,
+  .footer_bottom {
+    padding-inline: 15px;
+  }
+
   /* hero */
 
   .breadcrumb_container {
@@ -112,5 +127,29 @@
 
   .swiper_scrollbar_wrapper {
     margin-inline: 15px;
+  }
+
+  /* footer */
+  .footer_top,
+  .footer_middle_section.contact {
+    padding: 32px 15px;
+  }
+
+  .buger_menu_container.footer > .buger_menu_item_dropdown {
+    padding: 24px 15px;
+  }
+
+  .buger_menu_item_dropdown_title,
+  .footer_middle_section.title {
+    font-size: 16px;
+  }
+
+  .footer_bottom {
+    padding-inline: 15px;
+  }
+
+  .footer_bottom_section.links {
+    row-gap: 8px;
+    flex-wrap: wrap;
   }
 }

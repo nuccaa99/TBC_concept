@@ -68,11 +68,22 @@
 @media (max-width: 768px) {
   /* header */
   .page_logo,
-  .header_section_item.language_toggle {
+  .page_logo_darker {
     display: none;
   }
-  .page_logo.small {
+  .page_logo.small,
+  .page_logo_darker.small {
     display: inline-block;
+  }
+
+  /* menu burger */
+  .footer_bottom {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    row-gap: 32px;
+    font-size: 14px;
+
+    padding-inline: 45px;
   }
 
   /* hero */
@@ -216,5 +227,61 @@
 
   .offer_card_name {
     font-size: 14px;
+  }
+
+  /* footer */
+
+  footer {
+    row-gap: 0;
+  }
+
+  .buger_menu_container.footer {
+    background-color: #fff;
+    display: block;
+  }
+
+  .buger_menu_container.footer > .buger_menu_item_dropdown {
+    padding: 36px 45px;
+  }
+
+  .buger_menu_container.footer > .buger_menu_item_dropdown:first-child {
+    border-top: 1px solid var(--border_color);
+  }
+
+  .footer_top {
+    padding: 45px 36px;
+  }
+  .container_padding.footer::before {
+    bottom: 126px;
+  }
+
+  .container_padding.footer {
+    padding-top: 0px;
+    padding-inline: 0px;
+  }
+
+  .footer_middle {
+    flex-direction: column;
+  }
+
+  .footer_middle_section {
+    display: none;
+  }
+
+  .footer_middle_section.contact,
+  .footer_middle_section.socials,
+  .footer_middle_section.title {
+    display: flex;
+  }
+  .footer_middle_section.contact {
+    padding: 56px 45px;
+  }
+  .footer_middle_section.contact,
+  .footer_middle_section_list {
+    row-gap: 32px;
+  }
+
+  .footer_middle_section.title {
+    font-size: 24px;
   }
 }
