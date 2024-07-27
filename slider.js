@@ -1,22 +1,29 @@
 const body = document.body;
+
 const slidersConfig = [
   {
     dragArea: document.querySelector('.offers_slider'),
     slider: document.querySelector('.offers_wrapper'),
     swiperArrowLeft: document.querySelector('.swiper_arrow.left'),
     swiperArrowRight: document.querySelector('.swiper_arrow.right'),
-  },
-  {
-    dragArea: document.querySelector('.offers_slider.product'),
-    slider: document.querySelector('.offers_wrapper.product'),
-    swiperArrowLeft: document.querySelector('.swiper_arrow.left.product'),
-    swiperArrowRight: document.querySelector('.swiper_arrow.right.product'),
+    scrollBar: document.querySelector('.swiper_scrollbar.offer'),
+    scrollDrag: document.querySelector('.swiper_scrollbar_drag.offer'),
   },
   {
     dragArea: document.querySelector('.offers_slider.award'),
     slider: document.querySelector('.offers_wrapper.award'),
     swiperArrowLeft: document.querySelector('.swiper_arrow.left.award'),
     swiperArrowRight: document.querySelector('.swiper_arrow.right.award'),
+    scrollBar: document.querySelector('.swiper_scrollbar.award'),
+    scrollDrag: document.querySelector('.swiper_scrollbar_drag.award'),
+  },
+  {
+    dragArea: document.querySelector('.offers_slider.product'),
+    slider: document.querySelector('.offers_wrapper.product'),
+    swiperArrowLeft: document.querySelector('.swiper_arrow.left.product'),
+    swiperArrowRight: document.querySelector('.swiper_arrow.right.product'),
+    scrollBar: document.querySelector('.swiper_scrollbar.product'),
+    scrollDrag: document.querySelector('.swiper_scrollbar_drag.product'),
   },
 ];
 
@@ -32,8 +39,21 @@ const setArrowFilter = (arrow, filterStyle) => {
   arrow.style.filter = filterStyle;
 };
 
-const updateSliderPosition = (slider, cumulativeDistance) => {
+const updateSliderPosition = (config) => {
+  const { slider, cumulativeDistance, scrollBar, scrollDrag, scrollRange } =
+    config;
   slider.style.transform = `translate3d(${cumulativeDistance}px, 0px, 0px)`;
+
+  if (scrollBar && scrollDrag) {
+    const percentage =
+      (cumulativeDistance - config.MIN_DISTANCE) /
+      (MAX_DISTANCE - config.MIN_DISTANCE);
+
+    const scrollDragX = (1 - percentage) * scrollRange;
+    requestAnimationFrame(() => {
+      scrollDrag.style.transform = `translateX(${scrollDragX}px)`;
+    });
+  }
 };
 
 const updateArrowColors = (config) => {
@@ -65,7 +85,7 @@ const moveDrag = (config, x) => {
       Math.min(config.cumulativeDistance, MAX_DISTANCE),
       config.MIN_DISTANCE
     );
-    updateSliderPosition(config.slider, config.cumulativeDistance);
+    updateSliderPosition(config);
     config.startX = x;
   }
 };
@@ -81,7 +101,7 @@ const endDrag = (config, x) => {
       Math.min(config.cumulativeDistance, MAX_DISTANCE),
       config.MIN_DISTANCE
     );
-    updateSliderPosition(config.slider, config.cumulativeDistance);
+    updateSliderPosition(config);
     updateArrowColors(config);
   }
 };
@@ -95,7 +115,7 @@ const handleArrowClick = (config, direction) => {
       ? Math.min(config.cumulativeDistance + step, MAX_DISTANCE)
       : Math.max(config.cumulativeDistance - step, config.MIN_DISTANCE);
   updateArrowColors(config);
-  updateSliderPosition(config.slider, config.cumulativeDistance);
+  updateSliderPosition(config);
 };
 
 const initializeSlider = (config) => {
@@ -111,6 +131,12 @@ const initializeSlider = (config) => {
 
   config.cumulativeDistance = 0;
   config.dragging = false;
+
+  if (config.scrollBar && config.scrollDrag) {
+    config.scrollBarWidth = config.scrollBar.clientWidth;
+    config.scrollDragWidth = config.scrollDrag.clientWidth;
+    config.scrollRange = config.scrollBarWidth - config.scrollDragWidth;
+  }
 
   config.dragArea.addEventListener('mousedown', (e) =>
     startDrag(config, e.clientX)
@@ -135,7 +161,15 @@ const initializeSlider = (config) => {
   );
 };
 
-const resizeListener = () => {
+const debounce = (func, wait) => {
+  let timeout;
+  return function (...args) {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(this, args), wait);
+  };
+};
+
+const resizeListener = debounce(() => {
   requestAnimationFrame(() => {
     slidersConfig.forEach((config) => {
       let dragAreaWidth = config.dragArea.clientWidth;
@@ -150,11 +184,18 @@ const resizeListener = () => {
       }
 
       config.cumulativeDistance = 0;
-      updateSliderPosition(config.slider, config.cumulativeDistance);
+
+      if (config.scrollBar && config.scrollDrag) {
+        config.scrollBarWidth = config.scrollBar.clientWidth;
+        config.scrollDragWidth = config.scrollDrag.clientWidth;
+        config.scrollRange = config.scrollBarWidth - config.scrollDragWidth;
+      }
+
+      updateSliderPosition(config);
       updateArrowColors(config);
     });
   });
-};
+}, 200);
 
 window.addEventListener('resize', resizeListener);
 

@@ -103,6 +103,10 @@
   .swiper_arrows_wrapper.hidden {
     display: flex;
   }
+
+  .swiper_scrollbar.product {
+    height: 2px;
+  }
 }
 
 @media (max-width: 1100px) {
