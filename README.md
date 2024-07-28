@@ -31,20 +31,20 @@ To view the project, you can:
 4. **Responsive Design:**
    - Fully responsive design imitating the original website inch by inch.
    - Media queries for different devices (laptop, tablet, mobile).
-   - Header and footer transform into functional dropdowns on smaller screens.
+   - Header and footer transform into functional dropdowns on smaller screens (burgerMenu.js).
 
 5. **Interactive Elements:**
    - Hovering and transition effects using `:hover` and `transition` for smooth animations.
    - Burger menu on the header for smaller screens with a toggle functionality and distinctive animation using `@keyframes`.
-   - Dropdown menus in the header that open on click, with logic implemented to close them on outside click.
+   - Dropdown menus in the header that open on click, with logic implemented to close them on outside click (headerDropdown.js).
 
 6. **Sliders:**
-   - Three working sliders that can be navigated by dragging (using transform: translate3d).
+   - Three working sliders that can be navigated by dragging (slider.js).
    - Sliders feature a synchronized bottom scrollbar.
    - Arrow buttons for navigating between slider items.
 
 7. **Custom Scroll Design:**
-   - Custom scroll design that enhances the visual experience.
+   - Custom scroll design that enhances the visual experience (customScrollbar.js).
    - Scrollbar does not appear on the header.
    - Scrollbar disappears after 1 second of inactivity.
 
