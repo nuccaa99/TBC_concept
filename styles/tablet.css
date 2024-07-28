@@ -105,15 +105,18 @@
   }
 
   /* big msg */
-  .big_msg_container,
-  .container_padding.grid {
-    padding: 40px 0px 40px 45px;
+  .big_msg_container {
+    padding: 50px 45px;
   }
+
   .big_msg_section > p {
     font-size: 28px;
   }
 
   /* grid */
+  .container_padding.grid {
+    padding: 40px 0px 40px 45px;
+  }
   .grid_wrapper {
     row-gap: 28px;
   }
