@@ -1,4 +1,4 @@
-const burgerMenu = document.querySelector('.buger_menu_container');
+const burgerMenu = document.querySelector('.burger_menu_container');
 const burgerMenuIcon = document.querySelector('.header_burger_menu');
 const parent = document.querySelector('main');
 const children = parent.children;
@@ -32,13 +32,13 @@ window.addEventListener('resize', handleResize);
 
 document.addEventListener('DOMContentLoaded', function () {
   const titleWrappers = document.querySelectorAll(
-    '.buger_menu_item_dropdown_title_wrapper'
+    '.burger_menu_item_dropdown_title_wrapper'
   );
   const dropdownLists = document.querySelectorAll(
-    '.buger_menu_item_dropdown_list'
+    '.burger_menu_item_dropdown_list'
   );
   const dropdownArrows = document.querySelectorAll(
-    '.buger_menu_item_dropdown_title_wrapper img'
+    '.burger_menu_item_dropdown_title_wrapper img'
   );
 
   function toggleDropdown() {

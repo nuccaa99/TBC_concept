@@ -6,5 +6,5 @@ scrollableContent.addEventListener('scroll', () => {
 
   scrollableContent.scrollTimeout = setTimeout(() => {
     scrollableContent.classList.remove('scrolling');
-  }, 1500);
+  }, 1000);
 });

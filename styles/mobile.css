@@ -14,7 +14,7 @@
 
   /* burger menu */
 
-  .buger_menu_item_dropdown {
+  .burger_menu_item_dropdown {
     padding-inline: 15px;
   }
 
@@ -135,13 +135,13 @@
     padding: 32px 15px;
   }
 
-  .buger_menu_container.footer > .buger_menu_item_dropdown {
-    padding: 24px 15px;
-  }
-
-  .buger_menu_item_dropdown_title,
+  .burger_menu_item_dropdown_title.footer,
   .footer_middle_section.title {
     font-size: 16px;
+  }
+
+  .burger_menu_item_dropdown_list_item.footer > a {
+    font-size: 14px;
   }
 
   .footer_bottom {
@@ -149,7 +149,11 @@
   }
 
   .footer_bottom_section.links {
-    row-gap: 8px;
+    row-gap: 12px;
     flex-wrap: wrap;
+  }
+
+  .container_padding.footer::before {
+    bottom: 145px;
   }
 }

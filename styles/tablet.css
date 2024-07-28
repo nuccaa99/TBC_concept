@@ -235,19 +235,17 @@
     row-gap: 0;
   }
 
-  .buger_menu_container.footer {
+  .burger_menu_container.footer {
     background-color: #fff;
     display: block;
   }
 
-  .buger_menu_container.footer > .buger_menu_item_dropdown {
-    padding: 36px 45px;
-  }
-
-  .buger_menu_container.footer > .buger_menu_item_dropdown:first-child {
+  .burger_menu_container.footer > .burger_menu_item_dropdown:first-child {
     border-top: 1px solid var(--border_color);
   }
-
+  .burger_menu_item_dropdown_title.footer {
+    font-size: 24px;
+  }
   .footer_top {
     padding: 45px 36px;
   }
