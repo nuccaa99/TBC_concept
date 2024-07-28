@@ -29,7 +29,7 @@ To view the project, you can:
    - `assets` folder for all images, logos, and SVGs.
 
 4. **Responsive Design:**
-   - Fully responsive design imitating the original website inch by inch.
+   - Fully responsive design imitating the original website.
    - Media queries for different devices (laptop, tablet, mobile).
    - Header and footer transform into functional dropdowns on smaller screens (burgerMenu.js).
 
