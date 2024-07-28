@@ -6,6 +6,13 @@ This project is a clone of the TBC Concept website (https://tbcconcept.ge/ge/) d
 
 The project is structured with a single `index.html` file and an organized `styles` folder, which contains separate files for resetting elements, storing variables, general styling, and responsive designs for various devices (laptop, tablet, and mobile). Additionally, custom fonts from the TBC website were integrated using `@font-face`, and all visual assets, including pictures, logos, and SVGs, are managed in an `assets` folder.
 
+## Viewing the Project
+
+To view the project, you can:
+- Open `index.html` directly in your browser.
+- Open the project via Visual Studio Code's Live Server extension.
+- See the deployed version on GitHub Pages at [TBC Concept Clone](https://nuccaa99.github.io/TBC_concept/).
+
 ## Key Features
 
 1. **HTML and CSS Structure:**
@@ -44,9 +51,4 @@ The project is structured with a single `index.html` file and an organized `styl
 8. **Cross-Browser Compatibility:**
    - Ensures consistent performance and appearance across all major browsers: Chrome, Safari, Mozilla Firefox, and Edge.
 
-## Viewing the Project
 
-To view the project, you can:
-- Open `index.html` directly in your browser.
-- Open the project via Visual Studio Code's Live Server extension.
-- See the deployed version on GitHub Pages at [TBC Concept Clone](https://nuccaa99.github.io/TBC_concept/).
