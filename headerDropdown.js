@@ -42,3 +42,4 @@ function handleClickOutside(event) {
 }
 
 document.addEventListener('click', handleClickOutside);
+
