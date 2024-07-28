@@ -42,6 +42,23 @@ main.scrolling::-webkit-scrollbar-track {
   background: var(--border_color);
 }
 
+/* Firefox only */
+@-moz-document url-prefix() {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+  }
+
+  main {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+  }
+
+  main.scrolling {
+    scrollbar-color: var(--font_color_light) var(--border_color);
+  }
+}
+
 /* header */
 
 header {
